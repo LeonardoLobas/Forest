@@ -1,2 +1,29 @@
 @import "tailwindcss";
 
+@theme {
+  /* Cores Verde */
+  --color-verde-200: #ACEF75;
+  --color-verde-300: #91EE77;
+  --color-verde-400: #17E880;
+  --color-verde-700: #2E482C;
+  --color-verde-800: #162817;
+  --color-verde-900: #0F1C15;
+  --color-verde-950: #030504;
+}
+
+@layer utilities {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}

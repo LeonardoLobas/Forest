@@ -1,7 +1,11 @@
+import { WeatherCard } from "./components/WeatherCard";
+import { Menu } from "./components/Menu";
+
 function App() {
     return (
         <>
-            <p className="">Click on the Vite and React logos to learn more</p>
+            <WeatherCard dia="segunda" temperatura="25" emoji="🌤️" />
+            <Menu />
         </>
     );
 }
