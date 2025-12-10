@@ -14,7 +14,7 @@ export function Banner() {
                 <h1 className="mb-8 sm:mb-20 max-w-screen-sm font-serif text-4xl sm:text-5xl text-balance">Venha experimentar a Vida na Floresta</h1>
                 <div className="sm:flex items-end justify-between text-sm">
                     <p className="max-sm:mb-4">
-                        Melhores locais para visitar
+                        Melhores locais para visitar{" "}
                         <a className="underline decoration-2 underline-offset-2 hover:no-underline" href="./">
                             2049
                         </a>
