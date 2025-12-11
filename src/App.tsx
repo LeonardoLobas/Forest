@@ -3,6 +3,7 @@ import { Menu } from "./components/Menu";
 import { Banner } from "./components/Banner";
 import { Accommodations } from "./components/Accommodations";
 import { Events } from "./components/Events";
+import { Experience } from "./components/Experience";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Banner />
             <Accommodations />
             <Events />
+            <Experience />
         </>
     );
 }
