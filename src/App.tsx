@@ -5,6 +5,7 @@ import { Accommodations } from "./components/Accommodations";
 import { Events } from "./components/Events";
 import { Experience } from "./components/Experience";
 import { NaturalCycle } from "./components/NaturalCycle";
+import { Contact } from "./components/Contact";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
             <Events />
             <Experience />
             <NaturalCycle />
+            <Contact />
         </>
     );
 }
