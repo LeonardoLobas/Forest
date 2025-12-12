@@ -6,6 +6,8 @@ import { Events } from "./components/Events";
 import { Experience } from "./components/Experience";
 import { NaturalCycle } from "./components/NaturalCycle";
 import { Contact } from "./components/Contact";
+import { Partners } from "./components/Partners";
+import { Footer } from "./components/Footer";
 
 function App() {
     return (
@@ -18,6 +20,8 @@ function App() {
             <Experience />
             <NaturalCycle />
             <Contact />
+            <Partners />
+            <Footer />
         </>
     );
 }

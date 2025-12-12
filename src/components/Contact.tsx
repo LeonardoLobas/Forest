@@ -3,7 +3,7 @@ export function Contact() {
         <section id="contato" className="container mb-12 sm:mb-16 grid lg:grid-cols-2 gap-8">
             <div>
                 <h1 className="font-serif text-4xl text-verde-300 mb-4">Nossos Contatos</h1>
-                <p>Tem interesse em passar uma temporada conosco? Entre em contato.</p>
+                <p className="text-gray-400">Tem interesse em passar uma temporada conosco? Entre em contato.</p>
                 <div className="grid gap-4">
                     <div>
                         <span className="h-0.5 w-6 bg-verde-400 inline-block"></span>
