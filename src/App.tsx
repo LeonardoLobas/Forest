@@ -8,13 +8,19 @@ import { NaturalCycle } from "./components/NaturalCycle";
 import { Contact } from "./components/Contact";
 import { Partners } from "./components/Partners";
 import { Footer } from "./components/Footer";
+import { useEffect, useState } from "react";
 
 function App() {
+    const [temperatura, setTemperatura] = useState(0);
+    useEffect(() => {
+        const temp = Math.floor(Math.random() * (29 - 17 + 1)) + 17;
+        setTemperatura(temp);
+    }, []);
     return (
         <>
-            <WeatherCard dia="segunda" temperatura="25" emoji="🌤️" />
+            <WeatherCard temperatura={temperatura} />
             <Menu />
-            <Banner />
+            <Banner temperatura={temperatura} />
             <Accommodations />
             <Events />
             <Experience />
