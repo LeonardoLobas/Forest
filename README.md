@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# Forest 🌲
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma landing page criada para um resort de ecoturismo. A ideia é transportar quem visita o site direto pra natureza, mostrando as acomodações, eventos e experiências que o lugar oferece.
 
-Currently, two official plugins are available:
+## O que tem aqui
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto simula algumas coisas legais:
 
-## React Compiler
+- O clima muda toda vez que você recarrega a página - a temperatura é aleatória e o vídeo de fundo se adapta (sol ou chuva)
+- Menu animado pra mobile que abre e fecha de forma bem suave
+- Totalmente responsivo, funciona bem tanto no computador quanto no celular
+- Cards das acomodações, eventos e atividades
+- Seção de parceiros e depoimentos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologias usadas
 
-## Expanding the ESLint configuration
+O projeto foi construído com:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19 e TypeScript
+- Vite pra deixar o desenvolvimento mais rápido
+- Tailwind CSS pra estilização
+- Motion (Framer Motion) pras animações
+- ESLint e Prettier pra manter o código organizado
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Como rodar o projeto
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# Clone o repositório
+git clone <url-do-repositorio>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Instale as dependências
+npm install
+
+# Rode em modo desenvolvimento
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Depois é só abrir o navegador no endereço que aparecer no terminal (geralmente `http://localhost:5173`).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Comandos úteis
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev      # Roda o projeto localmente
+npm run build    # Cria a versão de produção
+npm run preview  # Testa a build antes de subir
+npm run lint     # Checa se tem algum erro no código
 ```
+
+## Como está organizado
+
+```
+src/
+├── components/       # Todos os componentes da página
+│   ├── Menu.tsx
+│   ├── Banner.tsx
+│   ├── WeatherCard.tsx
+│   └── outros componentes...
+├── assets/          # Imagens, vídeos e logos
+├── App.tsx          # Componente raiz
+└── main.tsx         # Arquivo de entrada
+```
+
+## Alguns detalhes legais
+
+- A temperatura é gerada aleatoriamente e compartilhada entre o card de clima e o banner (mostra chuva ou sol baseado nisso)
+- As animações do menu mobile têm um efeito cascata bem legal
+- Os componentes são todos tipados com TypeScript pra facilitar manutenção
+- Usei `useMemo` pra evitar cálculos desnecessários e melhorar a performance
+
+---
+
+Feito com React, TypeScript e muito café ☕
