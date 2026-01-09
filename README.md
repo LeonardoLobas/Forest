@@ -2,6 +2,10 @@
 
 Uma landing page criada para um resort de ecoturismo. A ideia é transportar quem visita o site direto pra natureza, mostrando as acomodações, eventos e experiências que o lugar oferece.
 
+Link para visualização 
+
+https://leonardolobas.github.io/Forest/
+
 ## O que tem aqui
 
 O projeto simula algumas coisas legais:
