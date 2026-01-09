@@ -13,7 +13,7 @@ export function Banner({ temperatura }: IBannerProps) {
             <div className="from-verde-950/80 relative overflow-hidden rounded-2xl bg-gradient-to-t px-8 sm:pt-64 pb-8 text-white sm:px-4 pt-12">
                 <img className="absolute inset-0 -z-10 size-full object-cover" src={floresta} alt="Banner" />
                 <video
-                    className="absolute inset-0 -z-10 size-full object-cover"
+                    className="absolute inset-0 animate-fade-in -z-10 size-full object-cover"
                     src={videoAtual}
                     width="1280"
                     height="720"
