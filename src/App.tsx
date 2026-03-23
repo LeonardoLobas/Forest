@@ -8,14 +8,10 @@ import { NaturalCycle } from "./components/NaturalCycle";
 import { Contact } from "./components/Contact";
 import { Partners } from "./components/Partners";
 import { Footer } from "./components/Footer";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
-    const [temperatura, setTemperatura] = useState(0);
-    useEffect(() => {
-        const temp = Math.floor(Math.random() * (29 - 17 + 1)) + 17;
-        setTemperatura(temp);
-    }, []);
+    const [temperatura] = useState(() => Math.floor(Math.random() * (29 - 17 + 1)) + 17);
     return (
         <>
             <WeatherCard temperatura={temperatura} />

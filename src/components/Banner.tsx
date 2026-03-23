@@ -1,20 +1,39 @@
 import wildbeast from "../assets/parceiros/wildbeast.svg";
 import videoChuva from "../assets/video_chuva.mp4";
 import videoSol from "../assets/video_sol.mp4";
+import { useEffect, useRef } from "react";
 
 interface IBannerProps {
     temperatura: number;
 }
 export function Banner({ temperatura }: IBannerProps) {
     const videoAtual = temperatura > 19 ? videoSol : videoChuva;
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        video.load();
+        const playPromise = video.play();
+        if (playPromise) {
+            playPromise.catch(() => {
+                // Some browsers can still block autoplay depending on user settings.
+            });
+        }
+    }, [videoAtual]);
+
     return (
         <main className="container">
             <div className="from-verde-950/80 relative overflow-hidden rounded-2xl bg-gradient-to-t px-8 sm:pt-64 pb-8 text-white sm:px-4 pt-12">
                 <video
+                    ref={videoRef}
+                    key={videoAtual}
                     className="absolute inset-0 animate-fade-in -z-10 size-full object-cover"
                     src={videoAtual}
                     width="1280"
                     height="720"
+                    preload="auto"
                     muted
                     playsInline
                     loop
