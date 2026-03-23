@@ -4,7 +4,7 @@ Uma landing page criada para um resort de ecoturismo. A ideia é transportar que
 
 Link para visualização 
 
-https://leonardolobas.github.io/Forest/
+https://forest-two-mu.vercel.app/
 
 ## O que tem aqui
 
